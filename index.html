@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>فالورانت: ذكاء العملاء</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- شريط المعلومات -->
+        <div class="info-bar">
+            <div class="score">
+                <i class="fas fa-star"></i>
+                <span id="score">0</span>
+            </div>
+            <div class="level">
+                <i class="fas fa-trophy"></i>
+                <span id="level">1</span>
+            </div>
+            <div class="timer">
+                <i class="fas fa-clock"></i>
+                <span id="timer">30</span>
+            </div>
+        </div>
+
+        <!-- منطقة السؤال -->
+        <div class="question-area">
+            <div class="question-icon" id="question-icon">
+                <i class="fas fa-question"></i>
+            </div>
+            <div id="question-text" class="question-text"></div>
+            <div id="ult-button" class="ult-button">
+                <i class="fas fa-bolt"></i>
+                تفعيل القوة
+            </div>
+        </div>
+
+        <!-- منطقة الاختيارات -->
+        <div id="choices" class="choices"></div>
+
+        <!-- منطقة عرض الصورة بعد الإجابة -->
+        <div id="answer-reveal" class="answer-reveal hidden">
+            <div class="reveal-content">
+                <div class="image-container">
+                    <img id="answer-image" src="" alt="" class="answer-image">
+                    <div class="image-overlay">
+                        <div class="image-info">
+                            <h3 id="answer-title"></h3>
+                            <p id="answer-description"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-message">
+                    <i class="fas fa-check-circle"></i>
+                    <span>إجابة صحيحة!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- تأثيرات بصرية -->
+        <div id="particle-container" class="particle-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
