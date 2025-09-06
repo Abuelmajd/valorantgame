@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فالورانت: ذكاء العملاء</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- شريط المعلومات -->
+        <div class="info-bar">
+            <div class="score">النقاط: <span id="score">0</span></div>
+            <div class="level">المستوى: <span id="level">1</span></div>
+            <div class="timer">الوقت: <span id="timer">30</span>ث</div>
+        </div>
+
+        <!-- منطقة السؤال -->
+        <div class="question-area">
+            <div class="question-icon" id="question-icon">
+                <i class="fas fa-question"></i>
+            </div>
+            <div id="question-text" class="question-text"></div>
+            <div id="ult-button" class="ult-button">⚡ تفعيل القوة</div>
+        </div>
+
+        <!-- منطقة الاختيارات -->
+        <div id="choices" class="choices"></div>
+
+        <!-- منطقة عرض الصورة بعد الإجابة -->
+        <div id="answer-reveal" class="answer-reveal hidden">
+            <div class="reveal-content">
+                <div class="image-container">
+                    <img id="answer-image" src="" alt="" class="answer-image">
+                    <div class="image-overlay">
+                        <div class="image-info">
+                            <h3 id="answer-title"></h3>
+                            <p id="answer-description"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-message">
+                    <i class="fas fa-check-circle"></i>
+                    <span>إجابة صحيحة!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- تأثيرات بصرية -->
+        <div id="particle-container" class="particle-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
